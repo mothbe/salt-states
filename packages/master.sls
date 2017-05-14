@@ -3,4 +3,5 @@ hold_master_packages:
     - pkgs:
       - salt-minion
       - salt-common
+      - salt-master
     - hold: True
