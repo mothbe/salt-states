@@ -1,6 +1,7 @@
 base:
-  '*':
-    - packages
+  'master':
+    - packages.master
   'client1':
-    - openssh.config
-    - users
+    - packages.common
+    - packages.minion
+
