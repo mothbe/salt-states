@@ -1,0 +1,24 @@
+crons:
+  '/usr/local/minutes':
+    user: root
+    minute: 2
+  '/usr/local/horly':
+    user: root
+    minute: 1
+    commented: True
+  '/usr/local/weekly':
+    user: root
+    absent: True
+
+cron_env_vars:
+  'MAILTO':
+    user: root
+    value: root@localhost
+  'PATH':
+    user: root
+    value: '/bin:/usr/bin'
+    absent: True
+  'VAR3':
+    user: root
+    value: 3
+    absent: True
