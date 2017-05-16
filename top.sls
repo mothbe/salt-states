@@ -6,4 +6,5 @@ base:
     - packages.minion
     - openssh.config
     - elements.motd
+    - users
 
