@@ -1,3 +1,5 @@
+{# Set user password and SSH keys #}
+
 {% for name, user in pillar.get('users', {}).items() %}
 {{ name }}_password:
   user.present:
