@@ -11,3 +11,4 @@ base:
     - elements.motd
     - packages.common
     - users.root_password_set
+    - users.password_set

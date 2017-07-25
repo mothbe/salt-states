@@ -14,3 +14,15 @@ salt minion1 state.sls users.root_password_set pillar='{ "users": { "root": { "p
 ```
 salt minion1 state.apply packages.update pillar='{ "packages": { "update": { "cache_valid_time": 3600 } } }'
 ```
+
+### Generate password
+
+SHA512
+```
+python3 -c 'import crypt; print(crypt.crypt("test", crypt.mksalt(crypt.METHOD_SHA512)))'
+```
+
+MD5
+```
+openssl passwd -1
+```
