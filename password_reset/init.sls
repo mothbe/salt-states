@@ -1,6 +1,7 @@
-{# Set user password and SSH keys #}
+# -*- coding: utf-8 -*-
+# vim: ft=sls
 
-{% for name, user in pillar.get('users', {}).items() %}
+{% for name, user in pillar.get('password_reset', {}).items() %}
 {{ name }}_password:
   user.present:
     - name: {{ name }}
