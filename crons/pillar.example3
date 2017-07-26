@@ -1,6 +1,11 @@
-crons:
-  crons_enabled:
-    'command1':
-      user: root
-      minute: 1
-      hour: 1
+cron_env_vars:
+  'MAILTO':
+    user: root
+    value: root@localhost
+  'PATH':
+    user: root
+    value: '/bin:/usr/bin'
+  'VAR3':
+    user: root
+    value: 3
+    absent: True

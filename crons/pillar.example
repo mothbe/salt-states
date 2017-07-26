@@ -1,15 +1,24 @@
-
-crons_enabled:
-  'command1':
-    user: root
-    minute: 1
-    hour: 1
-  'command2':
+crons:
+  '/usr/local/minutes':
     user: root
     minute: 2
-    hour: 1
-    comment: testing
-
-crons_disabled:
-  '/usr/local/test3':
+  '/usr/local/horly':
     user: root
+    minute: 1
+    commented: True
+  '/usr/local/weekly':
+    user: root
+    absent: True
+
+cron_env_vars:
+  'MAILTO':
+    user: root
+    value: root@localhost
+  'PATH':
+    user: root
+    value: '/bin:/usr/bin'
+    absent: True
+  'VAR3':
+    user: root
+    value: 3
+    absent: True
