@@ -1,0 +1,13 @@
+crons:
+  '/usr/local/minutes':
+    user: root
+    minute: 2
+    comment: comment1
+  '/usr/local/hourly':
+    user: root
+    minute: 1
+    comment: comment2
+    commented: False
+  '/usr/local/weekly':
+    user: root
+    absent: True
