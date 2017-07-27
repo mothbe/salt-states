@@ -1,7 +1,0 @@
-password_reset:
-  root:
-    password: "$6$OuQpIuHL627IOZSR$ZUkPue75YQ59LkLjeFdC6WdROgGv/WV.53OkaOYRVu4U9DVxQS0HG0PTZHG8IKg4WOwxo2y0gQYcApoDQElAD0"
-    hash_password: False
-  ubuntu:
-    password: s3cr3t
-    hash_password: True
