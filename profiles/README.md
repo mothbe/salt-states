@@ -11,7 +11,8 @@ Upgrade installed packages if updates are available.
 salt minion state.apply profiles.update_system
 ```
 
-cache_valid_time parameter sets the value in seconds after which the cache is marked as invalid, and a cache update is necessary
+
+cache_valid_time - parameter sets the value in seconds after which the cache is marked as invalid, and a cache update is necessary
 
 ```
 salt minion state.apply profiles.update_system pillar='{"update_system": {"cache_valid_time": 3600}}'
@@ -23,26 +24,24 @@ Set password and ssh public key ($HOME/.ssh/authorized_keys) for users.
 
 ### Basic usage
 
-Password (hash) changes every time on minion if hass_password is set to True
+Password changes every time on minion if hass_password is set to True:
 ```
 salt minion state.sls profiles.password_reset pillar='{ "password_reset": { "root": { "password": "s3cr3t", "hash_password": True } } }'
 ```
 
 ### Generate hash and set password
 
-Generate password
-
-SHA512
+SHA512:
 ```
 python3 -c 'import crypt; print(crypt.crypt("s3cr3t", crypt.mksalt(crypt.METHOD_SHA512)))'
 ```
 
-MD5
+MD5:
 ```
 openssl passwd -1
 ```
 
-Use hash as parameter
+Use hash as parameter:
 ```
 salt minion state.sls profiles.password_reset pillar='{"password_reset": {"root": {"password": "$6$OuQpIuHL627IOZSR$ZUkPue75YQ59LkLjeFdC6WdROgGv/WV.53OkaOYRVu4U9DVxQS0HG0PTZHG8IKg4WOwxo2y0gQYcApoDQElAD0"}}}'
 ```
