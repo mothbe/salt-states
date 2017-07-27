@@ -1,5 +1,5 @@
 base:
   'minion*':
-    - update_system
-    - password_reset
+    - profiles.update_system
+    - profiles.password_reset
     - crons
