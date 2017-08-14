@@ -1,4 +1,4 @@
 shutdown-droplet:
   droplet.shutdown:
-    - name: VM-name
-    - token: "XYZ"
+    - name: {{ pillar['instance_name'] }}
+    - token: {{ pillar['token'] }}

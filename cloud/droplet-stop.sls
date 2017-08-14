@@ -1,4 +1,4 @@
 stop-droplet:
   droplet.power_off:
-    - name: VM-name
-    - token: "XYZ"
+    - name: {{ pillar['instance_name'] }}
+    - token: {{ pillar['token'] }}
